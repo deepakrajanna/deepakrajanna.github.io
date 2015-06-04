@@ -3,7 +3,7 @@ function($scope, $http, $rootScope, $routeParams, getBirdData, getFamilyData, $w
 
 	
 	var base_url_dev = "http://localhost/deepak-bhaiya-birds/";
-	var base_url_prod = "http://deeprajanna.github.io/";
+	var base_url_prod = "http://deepakrajanna.github.io/";
 	
 	var location_name = $routeParams.locationName;
 	console.log(location_name);

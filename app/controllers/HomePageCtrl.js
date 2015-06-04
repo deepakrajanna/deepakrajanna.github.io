@@ -4,7 +4,7 @@ function($scope, $http, $rootScope, getBirdData, getFamilyData, getLocations, $r
 	
 	
 	var base_url_dev = "http://localhost/deepak-bhaiya-birds/";
-	var base_url_prod = "http://deeprajanna.github.io/";
+	var base_url_prod = "http://deepakrajanna.github.io/";
 	
 	getFamilyData.query(function(data) {
 		$scope.families = data.feed.entry;
