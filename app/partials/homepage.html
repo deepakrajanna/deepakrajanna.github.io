@@ -1,88 +1,112 @@
-<tabset justified="true">
-   	<tab heading="Families">
-   		</br>
-   		<div id="grid-gallery-families" class="grid-gallery">
-			<section class="grid-wrap">
-				<ul class="grid">
-					<li class="grid-sizer"></li><!-- for Masonry column width -->
-					<li ng-repeat="family in families"  on-finish-render="ngRepeatFinished">
-						<a ng-href="http://deepakrajanna.github.io/#/family/{{family['gsx$name']['$t']}}" target="_self" style="color: rgb(51, 51, 51);text-decoration: none;">
+<div class="container">
+	<header class="clearfix">
+		<span>Deepak Rajanna <span class="bp-icon bp-icon-about" data-content="I am a Golden Eagle."></span></span>
+		<a ng-click="changeToHomepage()" style="color:inherit!important;"><h1>Bird Gallery</h1></a>
+	</header>
+	<tabset justified="true">
+		<tab heading="Families">
+			</br>
+			<div id="grid-gallery" class="grid-gallery">
+				<section class="grid-wrap">
+					<ul class="grid">
+						<li class="grid-sizer"></li><!-- for Masonry column width -->
+						<li ng-repeat="family in families"  on-finish-render="ngRepeatFinished">
+							<!--a ng-href="http://deepakrajanna.github.io/#/family/{{family['gsx$name']['$t']}}" target="_self" style="color: rgb(51, 51, 51);text-decoration: none;"-->
+							<a ng-click='changeToFamilyPage(family["gsx$name"]["$t"])' style="color: rgb(51, 51, 51);text-decoration: none;">
 							<figure>
 								<img ng-src="{{family['gsx$repimage']['$t']}}"/>
-								<figcaption><h3>{{family['gsx$name']['$t']}}</h3><p>{{family['gsx$description']['$t']}}</p><i><p><b>Includes:</b> {{family['gsx$includes']['$t']}}</p></i></figcaption>
+								<figcaption>
+									<h3>{{family['gsx$name']['$t']}}</h3>
+									<p>
+										{{family['gsx$description']['$t']}}
+									</p><i>
+									<p>
+										<b>Includes:</b> {{family['gsx$includes']['$t']}}
+									</p></i>
+								</figcaption>
+							</figure> </a>
+						</li>
+					</ul>
+				</section><!-- // grid-wrap -->
+				<section class="slideshow">
+					<ul>
+						<li ng-repeat="family in families" >
+							<figure>
+								<figcaption>
+									<h3>{{family['gsx$name']['$t']}}</h3>
+									<p>
+										Includes: {{family['gsx$includes']['$t']}}
+									</p>
+									<p>
+										{{family['gsx$description']['$t']}}
+									</p>
+								</figcaption>
+								<img ng-src="{{family['gsx$repimage']['$t']}}" alt="{{family['gsx$name']['$t']}}"/>
 							</figure>
-						</a>
-					</li>
-				</ul>
-			</section><!-- // grid-wrap -->
-			<section class="slideshow">
-				<ul>
-					<li ng-repeat="family in families" >
-						<figure>
-							<figcaption>
-								<h3>{{family['gsx$name']['$t']}}</h3>
-								<p>Includes: {{family['gsx$includes']['$t']}}</p>
-								<p>{{family['gsx$description']['$t']}}</p>
-							</figcaption>
-							<img ng-src="{{family['gsx$repimage']['$t']}}" alt="{{family['gsx$name']['$t']}}"/>
-						</figure>
-					</li>
-				</ul>
-				<nav>
-					<span class="icon nav-prev"></span>
-					<span class="icon nav-next"></span>
-					<span class="icon nav-close"></span>
-				</nav>
-				<div class="info-keys icon">Navigate with arrow keys</div>
-			</section><!-- // slideshow -->
-		</div><!-- // grid-gallery -->
-   	</tab>
-   	<tab heading="Destinations">
-   		</br>
-   		<a ng-href="#/coverage">
-   			<button type="button" class="btn btn-success">
-		        Coverage
-		    </button>
-   		</a>
-   		</br>
-   		<div id="grid-gallery-locations" class="grid-gallery">
-			<section class="grid-wrap">
-				<ul class="grid">
-					<li class="grid-sizer"></li><!-- for Masonry column width -->
-					<li ng-repeat="location in locations"  on-finish-render="ngRepeatFinished">
-						<a ng-href="http://deepakrajanna.github.io/#/location/{{location['gsx$place']['$t']}}" target="_self" style="color: rgb(51, 51, 51);text-decoration: none;">
+						</li>
+					</ul>
+					<nav>
+						<span class="icon nav-prev"></span>
+						<span class="icon nav-next"></span>
+						<span class="icon nav-close"></span>
+					</nav>
+					<div class="info-keys icon">
+						Navigate with arrow keys
+					</div>
+				</section><!-- // slideshow -->
+			</div><!-- // grid-gallery -->
+		</tab>
+		<tab heading="Destinations">
+			</br>
+			<a ng-href="#/coverage">
+			<button type="button" class="btn btn-success">
+				Coverage
+			</button> </a>
+			</br>
+			<div id="grid-gallery" class="grid-gallery">
+				<section class="grid-wrap">
+					<ul class="grid">
+						<li class="grid-sizer"></li><!-- for Masonry column width -->
+						<li ng-repeat="location in locations"  on-finish-render="ngRepeatFinished">
+							<!--a ng-href="http://deepakrajanna.github.io/#/location/{{location['gsx$place']['$t']}}" target="_self" style="color: rgb(51, 51, 51);text-decoration: none;"-->
+							<a ng-click="changeToLocationPage(location['gsx$place']['$t'])" style="color: rgb(51, 51, 51);text-decoration: none;">
 							<figure>
 								<img ng-src="{{location['gsx$photo']['$t']}}"/>
-								<figcaption><h4>{{location['gsx$place']['$t']}}</h4><p>{{location['gsx$caption']['$t']}}</p></figcaption>
+								<figcaption>
+									<h4>{{location['gsx$place']['$t']}}</h4>
+									<p>
+										{{location['gsx$caption']['$t']}}
+									</p>
+								</figcaption>
+							</figure> </a>
+						</li>
+					</ul>
+				</section><!-- // grid-wrap -->
+				<section class="slideshow">
+					<ul>
+						<li ng-repeat="location in locations" >
+							<figure>
+								<figcaption>
+									<h3>{{location['gsx$place']['$t']}}</h3>
+									<p>
+										{{location['gsx$caption']['$t']}}
+									</p>
+								</figcaption>
+								<img ng-src="{{location['gsx$photo']['$t']}}" alt="{{location['gsx$place']['$t']}}"/>
 							</figure>
-						</a>
-					</li>
-				</ul>
-			</section><!-- // grid-wrap -->
-			<section class="slideshow">
-				<ul>
-					<li ng-repeat="location in locations" >
-						<figure>
-							<figcaption>
-								<h3>{{location['gsx$place']['$t']}}</h3>
-								<p>{{location['gsx$caption']['$t']}}</p>
-							</figcaption>
-							<img ng-src="{{location['gsx$photo']['$t']}}" alt="{{location['gsx$place']['$t']}}"/>
-						</figure>
-					</li>
-				</ul>
-				<nav>
-					<span class="icon nav-prev"></span>
-					<span class="icon nav-next"></span>
-					<span class="icon nav-close"></span>
-				</nav>
-				<div class="info-keys icon">Navigate with arrow keys</div>
-			</section><!-- // slideshow -->
-		</div><!-- // grid-gallery -->
-   	</tab>
-</tabset>
+						</li>
+					</ul>
+					<nav>
+						<span class="icon nav-prev"></span>
+						<span class="icon nav-next"></span>
+						<span class="icon nav-close"></span>
+					</nav>
+					<div class="info-keys icon">
+						Navigate with arrow keys
+					</div>
+				</section><!-- // slideshow -->
+			</div><!-- // grid-gallery -->
+		</tab>
+	</tabset>
 
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/masonry.pkgd.min.js"></script>
-<script src="assets/js/classie.js"></script>
-<script src="assets/js/cbpGridGallery.js"></script>
+</div>

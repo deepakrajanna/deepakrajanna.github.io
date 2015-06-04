@@ -1,6 +1,9 @@
-deepakBirdsControllers.controller('LocationPageCtrl', ['$scope', '$http', '$rootScope','$routeParams', 'getBirdData', 'getFamilyData',
-function($scope, $http, $rootScope, $routeParams, getBirdData, getFamilyData) {
+deepakBirdsControllers.controller('LocationPageCtrl', ['$scope', '$http', '$rootScope','$routeParams', 'getBirdData', 'getFamilyData', '$window',
+function($scope, $http, $rootScope, $routeParams, getBirdData, getFamilyData, $window) {
 
+	
+	var base_url_dev = "http://localhost/deepak-bhaiya-birds/";
+	var base_url_prod = "http://deeprajanna.github.io/";
 	
 	var location_name = $routeParams.locationName;
 	console.log(location_name);
@@ -22,4 +25,10 @@ function($scope, $http, $rootScope, $routeParams, getBirdData, getFamilyData) {
 			new CBPGridGallery(document.getElementById('grid-gallery'));
 		});
 	});
+	
+	$scope.changeToHomepage = function(){
+		$window.location.reload();
+		window.open(base_url_prod,"_self");
+	}
+	
 }]);

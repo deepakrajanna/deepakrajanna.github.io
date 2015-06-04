@@ -9,5 +9,6 @@ var deepakBirdsApp = angular.module('deepakBirdsApp', [
   'deepakBirdsServices',
   'ui.bootstrap',
   'angularFileUpload',
-  'ngStorage'
+  'ngStorage',
+  'ui.router'
 ]);
