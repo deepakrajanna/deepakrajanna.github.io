@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Deepak Rajanna: Bird Gallery</title>
+		<meta name="description" content="Deepak Rajanna: Birds: Bird Gallery" />
+		<meta name="keywords" content="Deepak Rajanna, bird gallery, birds" />
+		<meta name="author" content="Deepak Rajanna" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+		<script src="assets/js/modernizr.custom.js"></script>
+		<script src="assets/libs/jquery/jquery.min.js"></script>
+		<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/libs/angular-1.2.19/angular.js"></script>
+		<script src="assets/libs/angular-1.2.19/angular-route.js"></script>
+		<script src="assets/libs/angular-1.2.19/angular-resource.js"></script>
+		<script src="assets/libs/angular-1.2.19/angular-animate.js"></script>
+		<script src="assets/libs/angular-1.2.19/ngStorage.min.js"></script>
+		<script src="assets/libs/angular-file-upload/angular-file-upload.js"></script>
+		<script src="assets/libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<span>Deepak Rajanna <span class="bp-icon bp-icon-about" data-content="I want to be an Egyptian Vulture."></span></span>
+				<a ng-href="#/homepage" style="color:inherit!important;"><h1>Bird Gallery</h1></a>
+			</header>
+			<div ng-view></div>
+		</div>
+		<script src="app/app.module.js"></script>
+		<script src="app/app.routes.js"></script>
+		<script src="app/app.controller.js"></script>
+		
+		<script src="app/controllers/HomePageCtrl.js"></script>
+		<script src="app/controllers/FamilyPageCtrl.js"></script>
+		<script src="app/controllers/LocationPageCtrl.js"></script>
+		<script src="app/controllers/MapCtrl.js"></script>
+		
+		<script src="app/services/getBirdData.js"></script>
+		<script src="app/services/getFamilyData.js"></script>
+		<script src="app/services/getLocations.js"></script>
+		
+		<script src="app/shared/directives/directives.js"></script>
+		
+		
+		<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+		<script src="assets/js/masonry.pkgd.min.js"></script>
+		<script src="assets/js/classie.js"></script>
+		<script src="assets/js/cbpGridGallery.js"></script>
+		
+	</body>
+</html>

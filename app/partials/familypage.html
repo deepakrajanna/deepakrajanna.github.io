@@ -1,0 +1,56 @@
+<div class="container" style='text-align: center;'>
+	<h1>{{familyName}} family</h1>
+</div>
+</br>
+<div id="grid-gallery" class="grid-gallery">
+	<section class="grid-wrap">
+		<ul class="grid">
+			<li class="grid-sizer"></li><!-- for Masonry column width -->
+			<li ng-repeat="bird in birds"  on-finish-render="ngRepeatFinished">
+				<figure>
+					<img ng-src="{{bird['gsx$link']['$t']}}"/>
+					<figcaption>
+						<h3>{{bird['gsx$bird']['$t']}} {{bird['gsx$type']['$t']}}</h3>
+						<p>
+							{{bird['gsx$caption']['$t']}}
+						</p>
+					</figcaption>
+				</figure>
+			</li>
+		</ul>
+	</section><!-- // grid-wrap -->
+	<section class="slideshow">
+		<ul>
+			<li ng-repeat="bird in birds" >
+				<figure>
+					<figcaption>
+						<h3>{{bird['gsx$bird']['$t']}} {{bird['gsx$type']['$t']}}</h3>
+						<p>
+							<i> <b> Place: </b> {{bird['gsx$place']['$t']}} </i>
+						</p>
+						<p>
+							<i> <b> Confidence: </b> {{bird['gsx$confidence']['$t']}} </i>
+						</p>
+						<p>
+							<i> <b> Indian: </b> {{bird['gsx$indian']['$t']}} </i>
+						</p>
+						<p>
+							{{bird['gsx$description']['$t']}}
+						</p>
+					</figcaption>
+					<img ng-src="{{bird['gsx$link']['$t']}}" alt="{{bird['gsx$bird']['$t']}}"/>
+				</figure>
+			</li>
+		</ul>
+		<nav>
+			<span class="icon nav-prev"></span>
+			<span class="icon nav-next"></span>
+			<span class="icon nav-close"></span>
+		</nav>
+		<div class="info-keys icon">
+			Navigate with arrow keys
+		</div>
+	</section><!-- // slideshow -->
+</div><!-- // grid-gallery -->
+
+
