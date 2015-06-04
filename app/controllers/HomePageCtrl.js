@@ -7,7 +7,8 @@ function($scope, $http, $rootScope, getBirdData, getFamilyData, getLocations, $r
 			$scope.locations = data.feed.entry;
 			$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 				console.log("I am here homepage");
-				new CBPGridGallery(document.getElementById('grid-gallery'));
+				new CBPGridGallery(document.getElementById('grid-gallery-families'));
+				new CBPGridGallery(document.getElementById('grid-gallery-locations'));
 			});
 		});
 	});
