@@ -14,15 +14,16 @@
 							<!--a ng-href="http://deepakrajanna.github.io/#/family/{{family['gsx$name']['$t']}}" target="_self" style="color: rgb(51, 51, 51);text-decoration: none;"-->
 							<a ng-click='changeToFamilyPage(family["gsx$name"]["$t"])' style="color: rgb(51, 51, 51);text-decoration: none;">
 							<figure>
-								<img ng-src="{{family['gsx$repimage']['$t']}}"/>
+								<img ng-src="{{family['gsx$thumbnail']['$t']}}"/>
 								<figcaption>
 									<h3>{{family['gsx$name']['$t']}}</h3>
-									<p>
-										{{family['gsx$description']['$t']}}
-									</p><i>
+									<i>
 									<p>
 										<b>Includes:</b> {{family['gsx$includes']['$t']}}
-									</p></i>
+									</p></i><br/>
+									<p>
+										{{family['gsx$description']['$t']}}
+									</p>
 								</figcaption>
 							</figure> </a>
 						</li>
@@ -41,7 +42,7 @@
 										{{family['gsx$description']['$t']}}
 									</p>
 								</figcaption>
-								<img ng-src="{{family['gsx$repimage']['$t']}}" alt="{{family['gsx$name']['$t']}}"/>
+								<img ng-src="{{family['gsx$thumbnail']['$t']}}" alt="{{family['gsx$name']['$t']}}"/>
 							</figure>
 						</li>
 					</ul>
