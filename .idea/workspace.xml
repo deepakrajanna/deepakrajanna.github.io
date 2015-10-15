@@ -40,20 +40,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="locationpage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="locationpage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/partials/locationpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="117" selection-start-line="45" selection-start-column="117" selection-end-line="45" selection-end-column="117" />
+            <state vertical-scroll-proportion="0.5416667">
+              <caret line="45" column="98" selection-start-line="45" selection-start-column="98" selection-end-line="45" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="component.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="component.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18171021">
+            <state vertical-scroll-proportion="0.0">
               <caret line="219" column="11" selection-start-line="219" selection-start-column="11" selection-end-line="219" selection-end-column="11" />
               <folding />
             </state>
@@ -73,8 +73,8 @@
         <option value="$PROJECT_DIR$/app/shared/directives/directives.js" />
         <option value="$PROJECT_DIR$/app/controllers/HomePageCtrl.js" />
         <option value="$PROJECT_DIR$/app/partials/homepage.html" />
-        <option value="$PROJECT_DIR$/app/partials/locationpage.html" />
         <option value="$PROJECT_DIR$/assets/css/component.css" />
+        <option value="$PROJECT_DIR$/app/partials/locationpage.html" />
       </list>
     </option>
   </component>
@@ -417,18 +417,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/locationpage.html">
+    <entry file="file://$PROJECT_DIR$/assets/css/component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="117" selection-start-line="45" selection-start-column="117" selection-end-line="45" selection-end-column="117" />
+          <caret line="219" column="11" selection-start-line="219" selection-start-column="11" selection-end-line="219" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/component.css">
+    <entry file="file://$PROJECT_DIR$/app/partials/locationpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18171021">
-          <caret line="219" column="11" selection-start-line="219" selection-start-column="11" selection-end-line="219" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.5416667">
+          <caret line="45" column="98" selection-start-line="45" selection-start-column="98" selection-end-line="45" selection-end-column="98" />
           <folding />
         </state>
       </provider>
