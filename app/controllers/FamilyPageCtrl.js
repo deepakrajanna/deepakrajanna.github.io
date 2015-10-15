@@ -20,8 +20,7 @@ function($scope, $http, $rootScope, $routeParams, getBirdData, getFamilyData, $w
 			}
 		}
 		$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-			console.log("I am here familypage");
-			new CBPGridGallery(document.getElementById('grid-gallery'));
+			new CBPGridGallery_slideshow(document.getElementById('grid-gallery'));
 		});
 	});
 	

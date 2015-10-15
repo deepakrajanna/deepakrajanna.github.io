@@ -6,25 +6,31 @@ function($scope, $http, $rootScope, getBirdData, getFamilyData, getLocations, $r
 	var base_url_dev = "http://localhost/deepak-bhaiya-birds/";
 	var base_url_prod = "http://deepakrajanna.github.io/";
 	
-	getFamilyData.query(function(data) {
-		$scope.families = data.feed.entry;
-		getLocations.query(function(data) {
-			$scope.locations = data.feed.entry;
+	$scope.families_fill = function(){
+		getFamilyData.query(function(data) {
+			$scope.families = data.feed.entry;
 			$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-				console.log("I am here homepage");
 				new CBPGridGallery(document.getElementById('grid-gallery'));
 			});
+
 		});
-	});
+	}
+
+	$scope.destinations_fill = function(){
+		getLocations.query(function(data) {
+			$scope.locations = data.feed.entry;
+			$scope.$on('ngRepeatFinisheds', function(ngRepeatFinishedsEvent) {
+				new CBPGridGallery2(document.getElementById('grid-gallery-2'));
+			});
+		});
+	}
 	
 	$scope.changeToFamilyPage = function(family_name){
-		console.log(family_name);
 		$window.location.reload();
 		window.open(base_url_prod+'#/family/'+family_name,"_self");
 	}
 	
 	$scope.changeToLocationPage = function(location_name){
-		console.log(location_name);
 		$window.location.reload();
 		window.open(base_url_prod+'#/location/'+location_name,"_self");
 	}

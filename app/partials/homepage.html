@@ -3,8 +3,8 @@
 		<span><img src="assets/img/dr-01.png" style="width:20%;"/>Deepak Rajanna <span class="bp-icon bp-icon-about" data-content="I am a Golden Eagle."></span></span>
 		<a ng-click="changeToHomepage()" style="color:inherit!important;"><h1>Bird Gallery</h1></a>
 	</header>
-	<tabset justified="true">
-		<tab heading="Families">
+	<uib-tabset justified="true">
+		<uib-tab heading="Families" select="families_fill()">
 			</br>
 			<div id="grid-gallery" class="grid-gallery">
 				<section class="grid-wrap">
@@ -29,7 +29,7 @@
 						</li>
 					</ul>
 				</section><!-- // grid-wrap -->
-				<section class="slideshow">
+				<!--section class="slideshow">
 					<ul>
 						<li ng-repeat="family in families" >
 							<figure>
@@ -54,21 +54,24 @@
 					<div class="info-keys icon">
 						Navigate with arrow keys
 					</div>
-				</section><!-- // slideshow -->
+				</section--><!-- // slideshow -->
 			</div><!-- // grid-gallery -->
-		</tab>
-		<tab heading="Destinations">
+		</uib-tab>
+		<uib-tab heading="Destinations" select="destinations_fill()">
 			</br>
 			<a ng-href="#/coverage">
-			<button type="button" class="btn btn-success">
-				Coverage
-			</button> </a>
+				<span>
+					<button type="button" class="btn btn-success">
+						Coverage
+					</button>
+				</span>
+			</a>
 			</br>
-			<div id="grid-gallery" class="grid-gallery">
-				<section class="grid-wrap">
-					<ul class="grid">
-						<li class="grid-sizer"></li><!-- for Masonry column width -->
-						<li ng-repeat="location in locations"  on-finish-render="ngRepeatFinished">
+			<div id="grid-gallery-2" class="grid-gallery-2">
+				<section class="grid-wrap-2">
+					<ul class="grid-2">
+						<li class="grid-sizer-2"></li><!-- for Masonry column width -->
+						<li ng-repeat="location in locations"  on-finish-renders="ngRepeatFinisheds">
 							<!--a ng-href="http://deepakrajanna.github.io/#/location/{{location['gsx$place']['$t']}}" target="_self" style="color: rgb(51, 51, 51);text-decoration: none;"-->
 							<a ng-click="changeToLocationPage(location['gsx$place']['$t'])" style="color: rgb(51, 51, 51);text-decoration: none;">
 							<figure>
@@ -83,7 +86,7 @@
 						</li>
 					</ul>
 				</section><!-- // grid-wrap -->
-				<section class="slideshow">
+				<!--section class="slideshow-2">
 					<ul>
 						<li ng-repeat="location in locations" >
 							<figure>
@@ -105,9 +108,9 @@
 					<div class="info-keys icon">
 						Navigate with arrow keys
 					</div>
-				</section><!-- // slideshow -->
+				</section--><!-- // slideshow -->
 			</div><!-- // grid-gallery -->
-		</tab>
-	</tabset>
+		</uib-tab>
+	</uib-tabset>
 
 </div>

@@ -52,17 +52,17 @@
 		return a;
 	}
 
-	function CBPGridGallery( el, options ) {
+	function CBPGridGallery_slideshow( el, options ) {
 		this.el = el;
 		this.options = extend( {}, this.options );
   		extend( this.options, options );
   		this._init();
 	}
 
-	CBPGridGallery.prototype.options = {
+	CBPGridGallery_slideshow.prototype.options = {
 	};
 
-	CBPGridGallery.prototype._init = function() {
+	CBPGridGallery_slideshow.prototype._init = function() {
 		// main grid
 		this.grid = this.el.querySelector( 'section.grid-wrap > ul.grid' );
 		// main grid items
@@ -70,22 +70,22 @@
 		// items total
 		this.itemsCount = this.gridItems.length;
 		// slideshow grid
-		//this.slideshow = this.el.querySelector( 'section.slideshow > ul' );
+		this.slideshow = this.el.querySelector( 'section.slideshow > ul' );
 		// slideshow grid items
-		//this.slideshowItems = [].slice.call( this.slideshow.children );
+		this.slideshowItems = [].slice.call( this.slideshow.children );
 		// index of current slideshow item
-		//this.current = -1;
+		this.current = -1;
 		// slideshow control buttons
-		//this.ctrlPrev = this.el.querySelector( 'section.slideshow > nav > span.nav-prev' );
-		//this.ctrlNext = this.el.querySelector( 'section.slideshow > nav > span.nav-next' );
-		//this.ctrlClose = this.el.querySelector( 'section.slideshow > nav > span.nav-close' );
+		this.ctrlPrev = this.el.querySelector( 'section.slideshow > nav > span.nav-prev' );
+		this.ctrlNext = this.el.querySelector( 'section.slideshow > nav > span.nav-next' );
+		this.ctrlClose = this.el.querySelector( 'section.slideshow > nav > span.nav-close' );
 		// init masonry grid
 		this._initMasonry();
 		// init events
-		//this._initEvents();
+		this._initEvents();
 	};
 
-	CBPGridGallery.prototype._initMasonry = function() {
+	CBPGridGallery_slideshow.prototype._initMasonry = function() {
 		var grid = this.grid;
 		imagesLoaded( grid, function() {
 			new Masonry( grid, {
@@ -95,7 +95,7 @@
 		});
 	};
 
-	CBPGridGallery.prototype._initEvents = function() {
+	CBPGridGallery_slideshow.prototype._initEvents = function() {
 		var self = this;
 
 		// open the slideshow when clicking on the main grid items
@@ -143,7 +143,7 @@
 		});
 	};
 
-	CBPGridGallery.prototype._openSlideshow = function( pos ) {
+	CBPGridGallery_slideshow.prototype._openSlideshow = function( pos ) {
 		this.isSlideshowVisible = true;
 		this.current = pos;
 
@@ -172,7 +172,7 @@
 		}
 	};
 
-	CBPGridGallery.prototype._navigate = function( dir ) {
+	CBPGridGallery_slideshow.prototype._navigate = function( dir ) {
 		if( this.isAnimating ) return;
 		if( dir === 'next' && this.current === this.itemsCount - 1 ||  dir === 'prev' && this.current === 0  ) {
 			this._closeSlideshow();
@@ -278,7 +278,7 @@
 		setTimeout( slide, 25 );
 	}
 
-	CBPGridGallery.prototype._closeSlideshow = function( pos ) {
+	CBPGridGallery_slideshow.prototype._closeSlideshow = function( pos ) {
 		// remove class slideshow-open from the grid gallery elem
 		classie.removeClass( this.el, 'slideshow-open' );
 		// remove class animatable from the slideshow grid
@@ -315,7 +315,7 @@
 		}
 	};
 
-	CBPGridGallery.prototype._setViewportItems = function() {
+	CBPGridGallery_slideshow.prototype._setViewportItems = function() {
 		this.currentItem = null;
 		this.prevItem = null;
 		this.nextItem = null;
@@ -332,7 +332,7 @@
 	// taken from https://github.com/desandro/vanilla-masonry/blob/master/masonry.js by David DeSandro
 	// original debounce by John Hann
 	// http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-	CBPGridGallery.prototype._resizeHandler = function() {
+	CBPGridGallery_slideshow.prototype._resizeHandler = function() {
 		var self = this;
 		function delayed() {
 			self._resize();
@@ -344,7 +344,7 @@
 		this._resizeTimeout = setTimeout( delayed, 50 );
 	}
 
-	CBPGridGallery.prototype._resize = function() {
+	CBPGridGallery_slideshow.prototype._resize = function() {
 		if ( this.isSlideshowVisible ) {
 			// update width value
 			if( this.prevItem ) {
@@ -359,6 +359,6 @@
 	}
 
 	// add to global namespace
-	window.CBPGridGallery = CBPGridGallery;
+	window.CBPGridGallery_slideshow = CBPGridGallery_slideshow;
 
 })( window );
