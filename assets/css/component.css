@@ -43,6 +43,7 @@
 .grid-gallery figcaption h3 {
 	margin: 0;
 	padding: 0 0 0.5em;
+    word-wrap: break-word;
 }
 
 .grid-gallery-2 figcaption h3 {
