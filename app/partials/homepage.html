@@ -11,7 +11,7 @@
 					<ul class="grid">
 						<li class="grid-sizer"></li><!-- for Masonry column width -->
 						<li ng-repeat="family in families"  on-finish-render="ngRepeatFinished">
-							<!--a ng-href="http://deepakrajanna.github.io/#/family/{{family['gsx$name']['$t']}}" target="_self" style="color: rgb(51, 51, 51);text-decoration: none;"-->
+							
 							<a ng-click='changeToFamilyPage(family["gsx$name"]["$t"])' style="color: rgb(51, 51, 51);text-decoration: none;">
 							<figure>
 								<img ng-src="{{family['gsx$thumbnail']['$t']}}"/>
@@ -29,32 +29,7 @@
 						</li>
 					</ul>
 				</section><!-- // grid-wrap -->
-				<!--section class="slideshow">
-					<ul>
-						<li ng-repeat="family in families" >
-							<figure>
-								<figcaption>
-									<h3>{{family['gsx$name']['$t']}}</h3>
-									<p>
-										Includes: {{family['gsx$includes']['$t']}}
-									</p>
-									<p>
-										{{family['gsx$description']['$t']}}
-									</p>
-								</figcaption>
-								<img ng-src="{{family['gsx$thumbnail']['$t']}}" alt="{{family['gsx$name']['$t']}}"/>
-							</figure>
-						</li>
-					</ul>
-					<nav>
-						<span class="icon nav-prev"></span>
-						<span class="icon nav-next"></span>
-						<span class="icon nav-close"></span>
-					</nav>
-					<div class="info-keys icon">
-						Navigate with arrow keys
-					</div>
-				</section--><!-- // slideshow -->
+				
 			</div><!-- // grid-gallery -->
 		</uib-tab>
 		<uib-tab heading="Destinations" select="destinations_fill()">
@@ -63,7 +38,7 @@
 				<a ng-href="#/coverage">
 					<span>
 						<button type="button" class="btn btn-success">
-							Coverage
+							On the map
 						</button>
 					</span>
 				</a>
@@ -89,29 +64,7 @@
 						</li>
 					</ul>
 				</section><!-- // grid-wrap -->
-				<!--section class="slideshow-2">
-					<ul>
-						<li ng-repeat="location in locations" >
-							<figure>
-								<figcaption>
-									<h3>{{location['gsx$place']['$t']}}</h3>
-									<p>
-										{{location['gsx$caption']['$t']}}
-									</p>
-								</figcaption>
-								<img ng-src="{{location['gsx$photo']['$t']}}" alt="{{location['gsx$place']['$t']}}"/>
-							</figure>
-						</li>
-					</ul>
-					<nav>
-						<span class="icon nav-prev"></span>
-						<span class="icon nav-next"></span>
-						<span class="icon nav-close"></span>
-					</nav>
-					<div class="info-keys icon">
-						Navigate with arrow keys
-					</div>
-				</section--><!-- // slideshow -->
+				
 			</div><!-- // grid-gallery -->
 		</uib-tab>
 	</uib-tabset>

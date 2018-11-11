@@ -33,11 +33,11 @@
 							<p>
 								<i> <b> Place: </b> {{bird['gsx$place']['$t']}} </i>
 							</p>
-							<p>
-								<i> <b> Confidence: </b> {{bird['gsx$confidence']['$t']}} </i>
+							<p ng-if="bird['gsx$variation']['$t'] != ''" >
+								<i> <b> Variation: </b> {{bird['gsx$variation']['$t']}} </i>
 							</p>
 							<p>
-								<i> <b> Indian: </b> {{bird['gsx$indian']['$t']}} </i>
+								<i> <b> Scientific name: </b> {{bird['gsx$scientificname']['$t']}} </i>
 							</p>
 							<p>
 								{{bird['gsx$description']['$t']}}
