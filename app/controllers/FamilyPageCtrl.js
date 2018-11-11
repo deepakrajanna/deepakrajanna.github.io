@@ -1,7 +1,7 @@
 deepakBirdsControllers.controller('FamilyPageCtrl', ['$scope', '$http', '$rootScope','$routeParams', 'getBirdData', 'getFamilyData', '$window', 
 function($scope, $http, $rootScope, $routeParams, getBirdData, getFamilyData, $window) {
 
-	var base_url_dev = "http://localhost/deepak-bhaiya-birds/";
+	var base_url_dev = "http://localhost/bird/";
 	var base_url_prod = "http://deepakrajanna.github.io/";
 	
 	var family_name = $routeParams.familyName;

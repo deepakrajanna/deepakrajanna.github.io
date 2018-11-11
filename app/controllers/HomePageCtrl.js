@@ -3,7 +3,7 @@ function($scope, $http, $rootScope, getBirdData, getFamilyData, getLocations, $r
 
 	
 	
-	var base_url_dev = "http://localhost/deepak-bhaiya-birds/";
+	var base_url_dev = "http://localhost/bird/";
 	var base_url_prod = "http://deepakrajanna.github.io/";
 	
 	$scope.families_fill = function(){

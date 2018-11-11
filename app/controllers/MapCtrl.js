@@ -1,7 +1,7 @@
 deepakBirdsControllers.controller('MapCtrl', ['$scope', '$http', '$rootScope', 'getLocations', '$window',
 function($scope, $http, $rootScope, getLocations, $window) {
 
-	var base_url_dev = "http://localhost/deepak-bhaiya-birds/";
+	var base_url_dev = "http://localhost/bird/";
 	var base_url_prod = "http://deepakrajanna.github.io/";
 
 	getLocations.query(function(data) {
